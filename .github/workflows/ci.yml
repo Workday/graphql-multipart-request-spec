@@ -36,6 +36,8 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: npm
+      - name: Install our dependencies
+        run: npm install
       - name: Build our release
         run: npm run release
       - name: Upload artifact
